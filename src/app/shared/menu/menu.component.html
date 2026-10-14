@@ -1,11 +1,13 @@
-<nav class="navbar">
+<nav class="navbar" aria-label="Navegação principal">
   <div class="navbar-container">
     <div class="navbar-esquerda">
       <a class="navbar-logo" href="/">Fintech CRUD</a>
 
       <ul class="navbar-list">
-        @for(item of itensMenu; track item){
-          <li><a [href]="item.link">{{item.label}}</a></li>
+        @for(item of itensMenu; track item) {
+          <li class="navbar-item">
+            <a [routerLink]="item.link">{{item.label}}</a>
+          </li>
         }
       </ul>
     </div>
@@ -16,4 +18,3 @@
     </div>
   </div>
 </nav>
-

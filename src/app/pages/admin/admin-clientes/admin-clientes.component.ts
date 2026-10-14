@@ -1,8 +1,6 @@
-
 import { Component, inject, OnInit } from '@angular/core';
 import { Cliente } from '../../../model/cliente';
-import { ClienteService } from '../../../services/cliente/cliente.component';
-
+import { ClienteService } from '../../../services/cliente.services';
 
 @Component({
   selector: 'app-admin-clientes',
@@ -13,7 +11,6 @@ import { ClienteService } from '../../../services/cliente/cliente.component';
 })
 export class AdminClientesComponent implements OnInit {
 
-
   private service = inject(ClienteService);
   listaClientes: Cliente[] = [];
 
@@ -21,7 +18,7 @@ export class AdminClientesComponent implements OnInit {
     this.listaClientes = this.service.listar();
   }
 
- editar(id: number) {
+   editar(id: number) {
     console.log('Editar cliente:', id);
   }
 
@@ -30,5 +27,3 @@ export class AdminClientesComponent implements OnInit {
   }
 
 }
-
-
