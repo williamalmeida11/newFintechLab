@@ -11,7 +11,6 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo:string = 'Fintech CRUD';
-  nome:string = "Ana";
+
 
 }
