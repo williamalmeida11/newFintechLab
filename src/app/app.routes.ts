@@ -11,4 +11,5 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'cliente-cadastro', component: ClienteFormComponent},
     { path: 'Admin', component: AdminClientesComponent},
+    
 ];

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,32 +10,28 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-  botaoDesabilitado:boolean = true;
-  login:string = '';
-  senha:string = '';
+  router = inject(Router);
 
-  validarFormulario(){
-    if(this.login.trim() !=='' && this.senha.trim() !==''){
+  login: string = "";
+  senha: string = "";
+  botaoDesabilitado: boolean = true;
+
+  //Valido se os campos foram preenchidos para habilitar o botão de login
+  validarFormulario() {
+    if (this.login.trim() !== '' && this.senha.trim() !== '') {
       this.botaoDesabilitado = false;
-    }else{
+    } else {
       this.botaoDesabilitado = true;
     }
   }
 
-  fazerLogin(){
-    if(this.login === "admin@email.com" && this.senha==="123"){
-      alert("Bem-vindo(a) admin!");
-    }else{
-      alert("Credenciais inválidas!");
+  //Verifico se o usuário e senha são válidos
+  fazerLogin() {
+    if (this.login === 'admin@email.com' && this.senha === '123') {
+      alert(`Bem-vindo ${this.login}!`);
+      this.router.navigate(['/admin-clientes-listar']);
+    } else {
+      alert('Dados inválidos');
     }
   }
-
-  onBotaoClicado(){
-    alert("Confirmado!");
-  }
-
-  teclaSolta(evento:KeyboardEvent):void{
-    alert(`o usuário digitou ${evento.key}`);
-  }
-
 }

@@ -9,6 +9,7 @@ import { ClienteService } from '../../../services/cliente.services';
   templateUrl: './admin-clientes.component.html',
   styleUrl: './admin-clientes.component.css'
 })
+
 export class AdminClientesComponent implements OnInit {
 
   private service = inject(ClienteService);
@@ -27,3 +28,4 @@ export class AdminClientesComponent implements OnInit {
   }
 
 }
+
