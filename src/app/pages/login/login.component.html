@@ -3,23 +3,24 @@
     <form>
         <label for="email">Login</label><br>
         <input class="input-simples" id="email" name="email"
-	 type="email" placeholder="Digite seu email"
-            (keyup)="validarFormulario()"
-            [(ngModel)]="login"
-         />
+                type="email"
+                placeholder="Digite seu email" 
+                [(ngModel)]="login"
+                (keyup)="validarFormulario()"
+        />
 
         <label for="input-senha">Senha</label><br>
         <input class="input-simples" id="input-senha" name="input-senha"
-	type="password" placeholder="Digite sua senha"
-            (keyup)="validarFormulario()"
+            type="password"
+            placeholder="Digite sua senha"
             [(ngModel)]="senha"
+            (keyup)="validarFormulario()"
         />
 
-        <button class="input-submeter"
-            [disabled]="botaoDesabilitado"
-            (click)="fazerLogin()" >
+        <button class="input-submeter" [disabled]="botaoDesabilitado" (click)="fazerLogin()">
             Confirmar
         </button>
-    </form>
-</div>
 
+    </form>
+
+</div>

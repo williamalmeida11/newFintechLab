@@ -1,56 +1,65 @@
 <div class="content-container">
 
-    <div class="cabecalho">
-        <div>
-            <span class="subtitulo">
-                ÁREA ADMINISTRATIVA
-            </span>
-            <h1>Clientes</h1>
-            <p>
-                Gerencie os clientes cadastrados na plataforma.
-            </p>
-        </div>
-
-        <button class="botao-novo" type="button">
-            + Novo cliente
-        </button>
-
+  <div class="cabecalho">
+    <div>
+      <span class="subtitulo">
+        ÁREA ADMINISTRATIVA
+      </span>
+      <h1>Clientes</h1>
+      <p>
+        Gerencie os clientes cadastrados na plataforma.
+      </p>
     </div>
-    <div class="tabela-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Data de Nascimento</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
 
-                @for (cliente of listaClientes; track cliente.id) {
-                <tr>
-                    <td>{{ cliente.id }}</td>
-                    <td>{{ cliente.nome }}</td>
-                    <td>{{ cliente.sobrenome }}</td>
-                    <td>{{ cliente.dataNascimento }}</td>
+    <button
+      class="botao-novo"
+      routerLink="/cliente-cadastro"
+      type="button">
+      + Novo cliente
+    </button>
 
-                    <td class="acoes">
+  </div>
 
-                        <button class="botao-editar" type="button" (click)="editar(cliente.id!)">
-                            Editar
-                        </button>
+  <div class="tabela-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Data de Nascimento</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
 
-                        <button class="botao-excluir" type="button" (click)="excluir(cliente.id!)">
-                            Excluir
-                        </button>
+        @for (cliente of listaClientes; track cliente.id) {
+          <tr>
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.sobrenome }}</td>
+            <td>{{ cliente.dtNascimento }}</td>
 
-                    </td>
-                </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            <td class="acoes">
+
+              <button
+                class="botao-editar"
+                type="button"
+                [routerLink]="['/admin-clientes-editar', cliente.id]">
+                Editar
+              </button>
+
+              <button
+                class="botao-excluir"
+                type="button"
+                (click)="excluir(cliente.id)">
+                Excluir
+              </button>
+
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
-
