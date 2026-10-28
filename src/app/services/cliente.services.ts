@@ -6,10 +6,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ClienteService {
-
   private readonly API = 'http://localhost:3000/clientes';
-
   constructor(private http: HttpClient) { }
 
   listar(): Observable<Cliente[]> {
@@ -32,5 +31,4 @@ export class ClienteService {
   editar(cliente: Cliente): Observable<Cliente> {
     return this.http.put<Cliente>(`${this.API}/${cliente.id}`, cliente);
   }
-
 }

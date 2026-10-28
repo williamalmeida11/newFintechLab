@@ -22,10 +22,10 @@
       "cpf": "4567891231",
       "nome": "Teste",
       "sobrenome": "Souza",
-      "dtNascimento": "2026-10-26",
+      "dtNascimento": "2026-10-20",
       "email": "teste@teste.com",
       "senha": "123",
-      "id": "oG9NSrgpa6g"
+      "id": "0cURlMW"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -19,13 +19,10 @@ export class ClienteFormComponent implements OnInit {
   private router = inject(Router);
   confirmarSenha: string = '';
 
-  // Injeta o ActivatedRoute para acessar os parâmetros da rota
   private route = inject(ActivatedRoute);
   clienteId: string | null = this.route.snapshot.paramMap.get('id');
-
+  
   ngOnInit() {
-
-    // Se houver um ID na rota, significa que estamos editando um cliente existente
     if (this.clienteId) {
       this.service.buscarPorId(this.clienteId).subscribe({
         next: (cliente) => this.cliente = cliente,
@@ -41,25 +38,29 @@ export class ClienteFormComponent implements OnInit {
       return;
     }
 
-    if (this.clienteId) {
 
+    if (this.clienteId){
+      //modo alteracao
       this.service.editar(this.cliente).subscribe({
-        next: (cliente) => {
-          this.cliente = cliente;
-          this.router.navigate(['/admin-clientes-listar']);
-        },
-        error: () => alert('Erro ao alterar o cliente.')
-      });
-      
-    } else {
+      next: (cliente) => {
+        this.cliente = cliente;
+        this.router.navigate(['admin-clientes-listar']);
+      }
 
-      this.service.incluir(this.cliente).subscribe({
+      })
+
+    }else {
+       //modo onclusao
+
+        this.service.incluir(this.cliente).subscribe({
         next: (cliente) => {
           this.cliente = cliente;
           alert(`Cliente ${this.cliente.nome} cadastrado com sucesso!`);
           this.router.navigate(['/admin-clientes-listar']);
-        }
+         }
       });
     }
   }
+
+
 }
