@@ -4,7 +4,7 @@
 }
 
 .subtitulo {
-  color: #0055b8;
+  color: #294A35;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -18,7 +18,7 @@
 }
 .cabecalho h1 {
   margin: 8px 0;
-  color: #172033;
+  color: #294A35;
   font-size: 32px;
 }
 .cabecalho p {
@@ -30,7 +30,7 @@
 .botao-novo {
   padding: 11px 20px;
   color: #ffffff;
-  background-color: #0055b8;
+  background-color: #294A35;
   border: none;
   border-radius: 5px;
   font-size: 15px;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 .botao-novo:hover {
-  background-color: #003b7a;
+  background-color: #759B68;
 }
 
 .tabela-container {
@@ -98,11 +98,11 @@ tbody tr:hover {
 .botao-editar {
   margin-right: 8px;
   color: #ffffff;
-  background-color: #0055b8;
+  background-color: #262e36b3;
 }
 
 .botao-editar:hover {
-  background-color: #003b7a;
+  background-color: #3d4955;
 }
 
 .botao-excluir {

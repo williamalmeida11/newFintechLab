@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ClienteFormComponent } from './pages/cliente-form/cliente-form.component';
 import { AdminClientesComponent } from './pages/admin/admin-clientes/admin-clientes.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 export const routes: Routes = [
  { path: '', component: HomeComponent },
@@ -10,4 +11,6 @@ export const routes: Routes = [
  { path: 'cliente-cadastro', component: ClienteFormComponent },
  { path: 'admin-clientes-listar', component: AdminClientesComponent },
  { path: 'admin-clientes-editar/:id', component: ClienteFormComponent },
+ { path: 'sobre', component: SobreComponent},
+
 ];

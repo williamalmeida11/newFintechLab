@@ -26,6 +26,15 @@
       "email": "teste@teste.com",
       "senha": "123",
       "id": "0cURlMW"
+    },
+    {
+      "cpf": "99001920311",
+      "nome": "Bla",
+      "sobrenome": "Blaa",
+      "dtNascimento": "2026-10-07",
+      "email": "bla@email.com",
+      "senha": "000",
+      "id": "x0rWa9fEjkY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
