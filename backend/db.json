@@ -35,7 +35,23 @@
       "email": "www@email.com",
       "senha": "1234",
       "id": "lWS5kTUmf8U"
+    },
+    {
+      "cpf": "000",
+      "nome": "Bla",
+      "sobrenome": "Bla",
+      "dtNascimento": "2026-11-13",
+      "email": "www@email.comm",
+      "senha": "1234",
+      "id": "rkzxm5X"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "produtos": [
+    {
+      "id": "dip",
+      "nome": "Dipirona",
+      "valor": "10,99",
+      "descricao": "Dor de cabeça"
+    }
+  ]
 }

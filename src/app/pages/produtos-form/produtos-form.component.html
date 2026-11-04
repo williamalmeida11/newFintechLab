@@ -1,0 +1,32 @@
+<div class="content-container">
+
+  <form>
+
+    <h1>Cadastro de Produtos</h1>
+
+    <p class="descricao">
+      Preencha os dados abaixo para criar seu cadastro.
+    </p>
+
+    @if (produtosId) {
+      <label for="id">ID</label>
+      <input class="input-simples" id="id" name="id" type="text" [ngModel]="produtos.id" disabled />
+    }
+
+    <label for="nome">NOME</label>
+    <input class="input-simples" id="nome" name="nome" type="text" placeholder="Digite o nome"
+      [(ngModel)]="produtos.nome" />
+
+
+    <label for="valor">VALOR</label>
+    <input class="input-simples" id="valor" name="valor" type="number" placeholder="Digite o valor"
+      [(ngModel)]="produtos.valor" />
+
+    <label for="descricao">DESCRIÇÃO</label>
+    <input class="input-simples" id="descricao" name="descricao" type="text" placeholder="Digite a descrição"
+      [(ngModel)]="produtos.descricao" />
+
+
+  </form>
+
+</div>
