@@ -5,6 +5,7 @@ import { ClienteFormComponent } from './pages/cliente-form/cliente-form.componen
 import { AdminClientesComponent } from './pages/admin/admin-clientes/admin-clientes.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { ProdutosClientesComponent } from './pages/produtos/produtos/produtos-clientes/produtos-clientes.component';
+import { ProdutosFormComponent } from './pages/produtos-form/produtos-form.component';
 
 export const routes: Routes = [
  { path: '', component: HomeComponent },
@@ -14,6 +15,6 @@ export const routes: Routes = [
  { path: 'admin-clientes-editar/:id', component: ClienteFormComponent },
  { path: 'sobre', component: SobreComponent},
  { path: 'produtos', component: ProdutosClientesComponent},
- //{ path: 'produtos-cadastro', }
-
+ { path: 'produtos-cadastro', component: ProdutosFormComponent },
+ { path: 'produtos-clientes-editar/:id', component: ProdutosFormComponent },
 ];

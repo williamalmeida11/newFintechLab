@@ -50,7 +50,7 @@ export class ClienteFormComponent implements OnInit {
       })
 
     }else {
-       //modo onclusao
+       //modo inclusao
 
         this.service.incluir(this.cliente).subscribe({
         next: (cliente) => {

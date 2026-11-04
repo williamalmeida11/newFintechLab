@@ -2,56 +2,55 @@
   "clientes": [
     {
       "cpf": "12345678910",
-      "nome": "Enzo",
-      "sobrenome": "Santos",
-      "dtNascimento": "2001-01-18",
-      "email": "lorenzo@email.com",
+      "nome": "Fulano",
+      "sobrenome": "De Tal",
+      "dtNascimento": "2001-09-11",
+      "email": "fulano@email.com",
       "senha": "123",
       "id": "1iNEI8-iWcQ"
     },
     {
-      "cpf": "10987654321",
-      "nome": "Ana Silva",
-      "sobrenome": "Santos",
-      "dtNascimento": "2008-06-17",
-      "email": "ana@email.com",
+      "cpf": "77799911101",
+      "nome": "Jorge",
+      "sobrenome": "Ben Jor",
+      "dtNascimento": "1939-03-22",
+      "email": "jorgebenjor@email.com",
       "senha": "123",
       "id": "c_0Yd7hcGy4"
     },
     {
-      "cpf": "4567891231",
-      "nome": "Teste",
-      "sobrenome": "Souza",
-      "dtNascimento": "2026-10-20",
-      "email": "teste@teste.com",
+      "cpf": "12112112111",
+      "nome": "Pedro",
+      "sobrenome": "Rodrigues Filho",
+      "dtNascimento": "1954-10-29",
+      "email": "pedrinhobondadepura@email.com",
       "senha": "123",
       "id": "0cURlMW"
-    },
-    {
-      "cpf": "12",
-      "nome": "w",
-      "sobrenome": "a",
-      "dtNascimento": "2026-11-15",
-      "email": "www@email.com",
-      "senha": "1234",
-      "id": "lWS5kTUmf8U"
-    },
-    {
-      "cpf": "000",
-      "nome": "Bla",
-      "sobrenome": "Bla",
-      "dtNascimento": "2026-11-13",
-      "email": "www@email.comm",
-      "senha": "1234",
-      "id": "rkzxm5X"
     }
   ],
   "produtos": [
     {
-      "id": "dip",
       "nome": "Dipirona",
-      "valor": "10,99",
-      "descricao": "Dor de cabeça"
+      "valor": 10,
+      "descricao": "Dor de cabeça",
+      "id": "hmnV9CNJA_A"
+    },
+    {
+      "nome": "Tadalafila",
+      "valor": 20,
+      "descricao": "Vasodilatador",
+      "id": "lqnANYbTvJM"
+    },
+    {
+      "nome": "Loratadina",
+      "valor": 8.51,
+      "id": "tBdTNnLhVhM"
+    },
+    {
+      "nome": "Dorflex",
+      "valor": 6.99,
+      "id": "5wleL7H0Roo"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
