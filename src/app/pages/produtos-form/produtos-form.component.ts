@@ -13,18 +13,19 @@ import { ProdutosService } from "../../services/produtos.service";
 })
 
 export class ProdutosFormComponent implements OnInit {
- produtos: Produtos = {} as Produtos;
+  produtos: Produtos = {} as Produtos;
   private service = inject(ProdutosService);
   private router = inject(Router);
 
   private route = inject(ActivatedRoute);
   produtosId: string | null = this.route.snapshot.paramMap.get('id');
 
+
   ngOnInit() {
     if (this.produtosId) {
       this.service.buscarPorId(this.produtosId).subscribe({
         next: (produtos) => this.produtos = produtos,
-        error: () => alert('Produto não encontrado.')
+        error: () => alert('Produto não encontrado!')
       });
     }
   }
@@ -40,16 +41,25 @@ export class ProdutosFormComponent implements OnInit {
         }
       });
 
-    } else {
-      //modo inclusao
-      this.service.incluir(this.produtos).subscribe({
+  if(this.produtosId) {
+    // modo alteração
+    this.service.editar(this.produtos).subscribe({
+      next: (produtos) => {
+        this.produtos = produtos;
+        this.router.navigate(['produtos-admin-listar']);
+      }
+    })
+
+  }
+      }else {
+       //modo inclusao
+        this.service.incluir(this.produtos).subscribe({
         next: (produtos) => {
           this.produtos = produtos;
-          alert(`Produto ${this.produtos.nome} cadastrado com sucesso!`);
-          this.router.navigate(['/produtos']);
-        }
+          alert(`Produtos ${this.produtos.nome} cadastrado com sucesso!`);
+          this.router.navigate(['/produtos-clientes-listar']);
+         }
       });
     }
   }
-
 }
