@@ -12,6 +12,7 @@ export class MenuComponent {
   itensMenu = [
     { label: 'Inicio', link: '' },
     { label: 'Sobre', link: '/sobre' },
-    { label: 'Admin', link: '/Admin'},
+    { label: 'Produtos', link: '/produtos'},
+    {label: 'Carrinho', link: '/carrinho'}
   ] 
 }

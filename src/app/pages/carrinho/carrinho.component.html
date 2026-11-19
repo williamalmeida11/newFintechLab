@@ -1,0 +1,80 @@
+<div class="content-container">
+
+  <div class="cabecalho">
+    <div>
+      <span class="subtitulo">
+        FINALIZAR COMPRA
+      </span>
+      <h1>Meu Carrinho</h1>
+      <p>
+        Revise os produtos escolhidos antes de confirmar a compra.
+      </p>
+    </div>
+  </div>
+
+  <div class="tabela-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Valor Unitário</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        @for (item of itens; track item.produto.id) {
+          <tr>
+            <td>{{ item.produto.nome }}</td>
+            <td>{{ item.produto.valor | currency:'BRL' }}</td>
+
+            <td class="quantidade">
+              <div class="quantidade-controle">
+                <button
+                  class="botao-seta"
+                  type="button"
+                  (click)="diminuir(item.produto.id)">
+                  ▼
+                </button>
+                <span>{{ item.quantidade }}</span>
+                <button
+                  class="botao-seta"
+                  type="button"
+                  (click)="aumentar(item.produto.id)">
+                  ▲
+                </button>
+              </div>
+            </td>
+
+            <td>{{ item.produto.valor * item.quantidade | currency:'BRL' }}</td>
+
+            <td class="acoes">
+              <button
+                class="botao-excluir"
+                type="button"
+                (click)="remover(item.produto.id)">
+                Remover
+              </button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="5">O carrinho está vazio.</td>
+          </tr>
+        }
+
+      </tbody>
+    </table>
+  </div>
+
+  <form>
+    <h2>Total: {{ total | currency:'BRL' }}</h2>
+
+    <button class="input-submeter" type="button" (click)="finalizarCompra()">
+      Finalizar Compra
+    </button>
+  </form>
+
+</div>

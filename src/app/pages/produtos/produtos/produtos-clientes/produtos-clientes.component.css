@@ -27,6 +27,11 @@
   font-size: 16px;
 }
 
+.botoes-cabecalho {
+  display: flex;
+  gap: 12px;
+}
+
 .botao-novo {
   padding: 11px 20px;
   color: #ffffff;
@@ -83,6 +88,9 @@ tbody tr:hover {
 }
 
 .acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   white-space: nowrap;
 }
 
@@ -96,7 +104,6 @@ tbody tr:hover {
 }
 
 .botao-editar {
-  margin-right: 8px;
   color: #ffffff;
   background-color: #262e36b3;
 }
@@ -114,7 +121,6 @@ tbody tr:hover {
   background-color: #b91c1c;
 }
 
-/* Responsividade */
 @media (max-width: 700px) {
   .content-container {
     width: 90%;

@@ -1,7 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ProdutosService } from '../../../../services/produtos.service';
 import { Produtos } from '../../../../model/produtos';
+import { CarrinhoService } from '../../../../services/carrinho.service';
 
 @Component({
   selector: 'app-produtos-clientes',
@@ -12,6 +13,8 @@ import { Produtos } from '../../../../model/produtos';
 export class ProdutosClientesComponent implements OnInit{
   
   private service = inject(ProdutosService);
+  private carrinhoService = inject(CarrinhoService);
+  private router = inject(Router);
 
   listaProdutos:Produtos[] = [];
 
@@ -25,6 +28,15 @@ export class ProdutosClientesComponent implements OnInit{
 
   editar(id: string) {
     console.log('Editar produto:', id);
+  }
+
+  adicionarAoCarrinho(produto: Produtos) {
+    this.carrinhoService.adicionar(produto);
+    alert(`${produto.nome} adicionado ao carrinho!`);
+  }
+
+  irParaCarrinho() {
+    this.router.navigate(['/carrinho']);
   }
 
   excluir(id: string) {

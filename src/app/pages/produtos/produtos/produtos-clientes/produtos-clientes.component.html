@@ -10,12 +10,21 @@
         Gerencie os produtos cadastrados na plataforma.
       </p>
     </div>
-   <button
-      class="botao-novo"
-      routerLink="/produtos-cadastro"
-      type="button">
-      + Novo Produto
-    </button> 
+    <div class="botoes-cabecalho">
+      <button
+        class="botao-novo"
+        routerLink="/produtos-cadastro"
+        type="button">
+        + Novo Produto
+      </button>
+
+      <button
+        class="botao-novo"
+        type="button"
+        (click)="irParaCarrinho()">
+        Ver Carrinho
+      </button>
+    </div>
 
   </div>
 
@@ -53,6 +62,13 @@
                 type="button"
                 (click)="excluir(produtos.id)">
                 Excluir
+              </button>
+
+              <button
+                class="botao-editar"
+                type="button"
+                (click)="adicionarAoCarrinho(produtos)">
+                Adicionar ao carrinho
               </button>
 
             </td>

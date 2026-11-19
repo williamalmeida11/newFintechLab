@@ -6,6 +6,7 @@ import { AdminClientesComponent } from './pages/admin/admin-clientes/admin-clien
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { ProdutosClientesComponent } from './pages/produtos/produtos/produtos-clientes/produtos-clientes.component';
 import { ProdutosFormComponent } from './pages/produtos-form/produtos-form.component';
+import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 
 export const routes: Routes = [
  { path: '', component: HomeComponent },
@@ -17,4 +18,5 @@ export const routes: Routes = [
  { path: 'produtos', component: ProdutosClientesComponent},
  { path: 'produtos-cadastro', component: ProdutosFormComponent },
  { path: 'produtos-clientes-editar/:id', component: ProdutosFormComponent },
+ { path: 'carrinho', component: CarrinhoComponent },
 ];

@@ -13,7 +13,6 @@ import { ClienteService } from '../../services/cliente.services';
 })
 export class ClienteFormComponent implements OnInit {
 
-  //Defino um objeto cliente vazio para armazenar os dados do formulário
   cliente: Cliente = {} as Cliente;
   private service = inject(ClienteService);
   private router = inject(Router);

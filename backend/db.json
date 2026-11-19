@@ -43,13 +43,50 @@
     },
     {
       "nome": "Loratadina",
-      "valor": 8.51,
-      "id": "tBdTNnLhVhM"
+      "valor": 8.5,
+      "id": "tBdTNnLhVhM",
+      "descricao": "Antialérgico "
     },
     {
       "nome": "Dorflex",
       "valor": 6.99,
-      "id": "5wleL7H0Roo"
+      "id": "5wleL7H0Roo",
+      "descricao": "Analgésico "
+    }
+  ],
+  "vendas": [
+    {
+      "id": "1jb4iBp-zQE"
+    },
+    {
+      "itens": [
+        {
+          "produto": {
+            "nome": "Dipirona",
+            "valor": 12,
+            "descricao": "Dor de cabeça",
+            "id": "hmnV9CNJA_A"
+          },
+          "quantidade": 4
+        }
+      ],
+      "total": 48,
+      "id": "XsMAqToOXE0"
+    },
+    {
+      "itens": [
+        {
+          "produto": {
+            "nome": "Dipirona",
+            "valor": 12,
+            "descricao": "Dor de cabeça",
+            "id": "hmnV9CNJA_A"
+          },
+          "quantidade": 4
+        }
+      ],
+      "total": 48,
+      "id": "ESfBsrLAbHM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

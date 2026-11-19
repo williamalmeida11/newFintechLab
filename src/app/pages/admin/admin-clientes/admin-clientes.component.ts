@@ -18,7 +18,6 @@ export class AdminClientesComponent implements OnInit {
 
   ngOnInit():void{
     this.service.listar().subscribe({
-      //após receber a lista de clientes do serviço, atualiza a propriedade listaClientes
       next: (clientes) => {
         this.listaClientes = clientes;
       }
