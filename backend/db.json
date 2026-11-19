@@ -87,6 +87,21 @@
       ],
       "total": 48,
       "id": "ESfBsrLAbHM"
+    },
+    {
+      "itens": [
+        {
+          "produto": {
+            "nome": "Dipirona",
+            "valor": 12,
+            "descricao": "Dor de cabeça",
+            "id": "hmnV9CNJA_A"
+          },
+          "quantidade": 3
+        }
+      ],
+      "total": 36,
+      "id": "en5Qb-xDSU4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

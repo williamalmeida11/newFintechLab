@@ -13,6 +13,6 @@ export class MenuComponent {
     { label: 'Inicio', link: '' },
     { label: 'Sobre', link: '/sobre' },
     { label: 'Produtos', link: '/produtos'},
-    {label: 'Carrinho', link: '/carrinho'}
+    { label: 'Carrinho', link: '/carrinho'}
   ] 
 }
